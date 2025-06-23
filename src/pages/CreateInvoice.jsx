@@ -52,7 +52,7 @@ const CreateInvoice = () => {
     const loadPartyData = async () => {
       setIsLoadingParties(true);
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/parties");
+        const response = await fetch("http://127.0.0.1:8000/parties");
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -110,6 +110,7 @@ const CreateInvoice = () => {
       party: { c_name: "", address: "", contact: "", gst: "" },
     });
   };
+  console.log(invoiceData.c_name)
 
   const onSubmit = async (data) => {
     if (!invoiceData.party.c_name) {
@@ -155,7 +156,7 @@ const CreateInvoice = () => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/invoices/create/",
+        "/invoices/create/",
         {
           method: "POST",
           headers: {
