@@ -52,7 +52,7 @@ const CreateInvoice = () => {
     const loadPartyData = async () => {
       setIsLoadingParties(true);
       try {
-        const response = await fetch("http://127.0.0.1:8000/parties");
+        const response = await fetch("/parties");
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
