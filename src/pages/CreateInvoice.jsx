@@ -52,7 +52,7 @@ const CreateInvoice = () => {
     const loadPartyData = async () => {
       setIsLoadingParties(true);
       try {
-        const response = await fetch("https://invoice-backend-846x.onrender.com/parties");
+        const response = await fetch("/parties");
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -110,7 +110,7 @@ const CreateInvoice = () => {
       party: { c_name: "", address: "", contact: "", gst: "" },
     });
   };
-  console.log(invoiceData.c_name)
+  console.log(invoiceData.party.c_name)
 
   const onSubmit = async (data) => {
     if (!invoiceData.party.c_name) {

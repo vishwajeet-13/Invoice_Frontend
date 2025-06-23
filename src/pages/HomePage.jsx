@@ -10,7 +10,6 @@ const HomePage = () => {
   const navigate = useNavigate();
   const [invoices, setInvoices] = useState([]);
 
-  // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
 

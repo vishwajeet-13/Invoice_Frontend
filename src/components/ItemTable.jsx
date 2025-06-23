@@ -17,9 +17,7 @@ const ItemTable = ({ onItemsChange }) => {
 
   const updateParent = (updatedRows) => {
     if (onItemsChange) {
-      const formattedItems = updatedRows
-        .filter((row) => row.item && row.qty && row.rate)
-        .map((row) => ({
+      const formattedItems = updatedRows.map((row) => ({
           item_name: row.item,
           quantity: parseFloat(row.qty) || 0,
           rate: parseFloat(row.rate) || 0,
