@@ -156,7 +156,7 @@ const CreateInvoice = () => {
 
     try {
       const response = await fetch(
-        "/invoices/create/",
+        "https://invoice-backend-846x.onrender.com/invoices/create/",
         {
           method: "POST",
           headers: {

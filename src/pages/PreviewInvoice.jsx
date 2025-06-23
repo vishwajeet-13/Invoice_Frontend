@@ -19,7 +19,7 @@ const PreviewInvoice = () => {
         }
 
         const response = await fetch(
-          `/invoices/latest/`
+          `https://invoice-backend-846x.onrender.com/invoices/latest/`
         );
 
         if (!response.ok) {
