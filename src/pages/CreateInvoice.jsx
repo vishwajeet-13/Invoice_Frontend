@@ -52,7 +52,7 @@ const CreateInvoice = () => {
     const loadPartyData = async () => {
       setIsLoadingParties(true);
       try {
-        const response = await fetch("https://invoice-backend-846x.onrender.com/api/parties");
+        const response = await fetch("https://invoice-backend-846x.onrender.com/parties");
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
